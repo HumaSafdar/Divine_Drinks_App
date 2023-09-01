@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "633071304649",
+    "project_id": "divine-28962",
+    "storage_bucket": "divine-28962.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633071304649:android:608d2e215cf0c4e977f218",
+        "android_client_info": {
+          "package_name": "com.example.divine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633071304649-mgsqp2b3oie6vdi9u45nemt1nof45oh6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCIW_S7CDKFOVI1jmhaIQO-dw0QZeUJ4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633071304649-mgsqp2b3oie6vdi9u45nemt1nof45oh6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
