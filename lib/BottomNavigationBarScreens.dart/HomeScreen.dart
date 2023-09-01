@@ -37,28 +37,26 @@ class _MyHomePageState extends State<MyHomePage> {
   Map<String, int> itemQuantities = {}; 
   int cartCounter = 1;
 
-  void addTOCart(deals Deals) async {
-  num totalPrice(item, Noorders) {
-    return item * Noorders;
-  }
+void addTOCart(deals Deals) async {
+  int currentQuantity = itemQuantities[Deals.name] ?? 0;
 
-  int currentQuantity = itemQuantities[Deals.name] ??0;
+  final newQuantity = currentQuantity + 1;
+  final newPrice = Deals.price * newQuantity;
 
-  final newPrice = totalPrice(Deals.price, currentQuantity + 1);
   final cartItemDoc = firebase
       .doc(FirebaseAuth.instance.currentUser!.email)
       .collection('Orders')
       .doc(Deals.name);
 
-  itemQuantities[Deals.name] = currentQuantity + 1;
+  itemQuantities[Deals.name] = newQuantity;
 
   cartItemDoc.set({
     'name': Deals.name,
     'image': Deals.image,
-    "price": newPrice,
+    'price': newPrice,
     'originalprice': Deals.price,
     'quantity': Deals.quantity,
-    "noOrders": itemQuantities[Deals.name],
+    'noOrders': newQuantity,
   });
 }
 

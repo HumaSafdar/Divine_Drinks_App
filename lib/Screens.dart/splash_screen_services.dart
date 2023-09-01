@@ -12,19 +12,12 @@ class splashServices {
     if (FirebaseAuth.instance.currentUser != null) {
       Timer(
           const Duration(seconds: 2),
-          () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) =>  bottomNavigation(),
-              )));
+          () =>Navigator.pushNamedAndRemoveUntil(context, bottomNavigation.pageName, (route) => false)
+             );
     } else {
       Timer(
           const Duration(seconds: 2),
-          () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) =>const SignIn(),
-              )));
+          () => Navigator.pushNamedAndRemoveUntil(context, SignIn.pageName, (route) => false));
     }
  
   }
